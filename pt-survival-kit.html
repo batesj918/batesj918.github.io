@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PT Survival Kit — Justin Bates</title>
+<meta name="description" content="A three-tool digital bundle that helps physical therapists push back on burnout.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo">Justin Bates</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#work" class="nav-link">Work</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      <li><a href="assets/Justin-Bates-Resume.pdf" class="nav-link nav-cta" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <a href="index.html#work" class="back-link">← All projects</a>
+      <div class="card-meta"><span class="status dev">Pre-launch</span><span class="category">Digital product</span></div>
+      <h1>PT Survival Kit</h1>
+      <p class="lede">A three-tool digital bundle that helps physical therapists push back on burnout.</p>
+      <dl class="facts"><div class="fact"><dt>Role</dt><dd>Solo: concept, build</dd></div><div class="fact"><dt>Status</dt><dd>Pre-launch</dd></div><div class="fact"><dt>Platform</dt><dd>Web landing page</dd></div><div class="fact"><dt>Checkout</dt><dd>Gumroad</dd></div></dl>
+
+      <div class="gallery" data-gallery>
+        <div class="gallery-main"><div class="backdrop"></div><img src="assets/shots/cover-ptkit.jpg" alt="PT Survival Kit bundle overview"></div>
+        <p class="gallery-caption">The three tools in the bundle. The landing page isn&#x27;t public yet, so this illustrates its contents.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container story">
+      <div>
+        <h2>The challenge</h2>
+        <p>Physical therapists are burning out under documentation, required continuing-education (CEU) credits and the pressure to keep up with research. As a recruiter hiring PTs day to day at Professional Therapy Partners, I see this firsthand.</p>
+        <h2 style="margin-top:26px">What I built</h2>
+        <p>A one-time-purchase bundle of three digital tools, each aimed at one of the biggest daily stressors. It is sold through a conversion-focused landing page that walks visitors from the problem to the tools, how they work and bundle pricing.</p>
+      </div>
+      <div>
+        <h2>Results</h2>
+        <ul class="results"><li><strong>Fully built, mobile-responsive landing page</strong>: hero, problem, solution, how it works, pricing.</li><li><strong>Value-stack offer:</strong> $87 of tools for $49, with Gumroad checkout and instant download.</li><li><strong>One listing away from launch.</strong></li></ul>
+        <h2 style="margin-top:30px">Built with</h2>
+        <ul class="stack"><li>React + TypeScript</li><li>Vite</li><li>Tailwind CSS v4</li><li>Radix UI / shadcn/ui</li><li>Express</li><li>Drizzle</li><li>Gumroad</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container">
+      <h2>Features <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-3);font-weight:400;margin-left:8px">7 total</span></h2>
+      <div class="feature-grid"><div class="feature-group"><h3>The three tools</h3><ul><li><strong>Burnout Reset Planner</strong>: printable and digital weekly planner, a daily top-3 priorities system, documentation time blocks and boundary scripts</li><li><strong>No-BS CEU Finder</strong>: curated, affordable, commonly accepted CEUs with online and live options, ethics-requirement filters, cost comparisons, and notes and ratings</li><li><strong>Evidence Survival Kit</strong>: plain-language research summaries (what the evidence supports and what it doesn't), patient talking points and insurance rebuttal scripts</li></ul></div><div class="feature-group"><h3>Landing page + offer</h3><ul><li>Built as six sections: hero → problem → solution → how it works → pricing → footer</li><li>Value-stack pricing: $87 in separate tools offered as a $49 bundle</li><li>Gumroad checkout with instant digital download and lifetime updates</li><li>Mobile-responsive, accessible component library (Radix / shadcn)</li></ul></div></div>
+    </div>
+  </section>
+
+  <div class="container pager">
+    <a href="trading-bot.html"><small>← Previous</small><span>Trading Bot</span></a>
+    <a href="no-ego-club.html" class="next"><small>Next →</small><span>No Ego Club</span></a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Justin Bates</span>
+    <a href="mailto:batesj918@gmail.com">batesj918@gmail.com</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close">&times;</button><img alt=""></div>
+<script src="js/script.js"></script>
+</body>
+</html>

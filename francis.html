@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francis — Justin Bates</title>
+<meta name="description" content="A personal AI agent that hands real work to four specialist sub-agents, with guardrails on every action.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo">Justin Bates</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#work" class="nav-link">Work</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      <li><a href="assets/Justin-Bates-Resume.pdf" class="nav-link nav-cta" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <a href="index.html#work" class="back-link">← All projects</a>
+      <div class="card-meta"><span class="status live">In daily use</span><span class="category">AI agents</span></div>
+      <h1>Francis — Multi-Agent AI Orchestrator</h1>
+      <p class="lede">A personal AI agent that hands real work to four specialist sub-agents, with guardrails on every action.</p>
+      <dl class="facts"><div class="fact"><dt>Role</dt><dd>Solo: design, build, run</dd></div><div class="fact"><dt>Status</dt><dd>In daily use</dd></div><div class="fact"><dt>Platform</dt><dd>Python · Claude API</dd></div><div class="fact"><dt>Interfaces</dt><dd>Terminal · voice · web · Discord</dd></div></dl>
+
+      <div class="gallery" data-gallery>
+        <div class="gallery-main"><div class="backdrop"></div><img src="assets/shots/francis-architecture.jpg" alt="Francis architecture diagram"></div>
+        <p class="gallery-caption">One orchestrator, four specialist sub-agents, and a safety layer that every tool call passes through.</p>
+      <div class="gallery-thumbs"><button class="gallery-thumb is-active" aria-pressed="true" aria-label="Francis architecture diagram" data-src="assets/shots/francis-architecture.jpg" data-alt="Francis architecture diagram" data-caption="One orchestrator, four specialist sub-agents, and a safety layer that every tool call passes through."><img src="assets/shots/francis-architecture.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Francis browser dashboard" data-src="assets/shots/francis-ui.jpg" data-alt="Francis browser dashboard" data-caption="The local dashboard (shown with sample data): chat, sub-agent status, heartbeat notices, memory, spend and self-knowledge."><img src="assets/shots/francis-ui.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Etsy Studio pipeline diagram" data-src="assets/shots/etsy-studio-pipeline.jpg" data-alt="Etsy Studio pipeline diagram" data-caption="The sub-agents chained into a pipeline that takes an Etsy listing from niche research to live."><img src="assets/shots/etsy-studio-pipeline.jpg" alt="" loading="lazy"></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container story">
+      <div>
+        <h2>The challenge</h2>
+        <p>General-purpose chatbots forget everything between sessions, don't know how I actually make decisions, and can't safely take real actions like publishing a product or spending money.</p>
+        <h2 style="margin-top:26px">What I built</h2>
+        <p>Francis is an orchestrator I built in Python on the Claude API, across 14 numbered builds. It keeps long-term memory and a 90-day plan, and it hands real work to four specialist sub-agents:</p><p><strong>Herald</strong> researches markets and writes SEO copy, <strong>Draper</strong> turns research into design direction, <strong>Courier</strong> builds and publishes products, and <strong>Wright</strong> maintains Francis itself. Every tool call passes through a safety layer: a kill switch, approval gates, rate caps, a money guard and an audit log.</p>
+      </div>
+      <div>
+        <h2>Results</h2>
+        <ul class="results"><li><strong>Runs my Etsy shop.</strong> The sub-agents have taken listings from niche research to live, with one approval from me in Discord.</li><li><strong>Used every day</strong> from the terminal, by voice, in a browser dashboard and through Discord.</li><li><strong>680+ automated tests</strong>, and a pre-push gate blocks any change that breaks them.</li></ul>
+        <h2 style="margin-top:30px">Built with</h2>
+        <ul class="stack"><li>Python 3</li><li>Anthropic Claude API</li><li>pytest</li><li>Three.js</li><li>Server-sent events</li><li>ElevenLabs</li><li>Discord API</li><li>Printify + Etsy APIs</li><li>Replicate</li><li>Pillow</li><li>NumPy</li><li>Git hooks</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container">
+      <h2>Features <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-3);font-weight:400;margin-left:8px">26 total</span></h2>
+      <div class="feature-grid"><div class="feature-group"><h3>Orchestrator + sub-agents</h3><ul><li>Sub-agent roster lives in a config file and reloads without a restart; each agent has its own prompt, tool allowlist and iteration limit</li><li><strong>Herald</strong>: pulls top Etsy listings and prices for a niche, checks real production cost, writes the SEO title, exactly 13 tags and the description</li><li><strong>Draper</strong>: turns Herald's themes and palettes into precise design briefs and embroidery-safe design specs, then sends them to Discord</li><li><strong>Courier</strong>: uploads artwork, creates the Printify product, publishes it to Etsy, and checks status and mockups (read-only checks need no confirmation)</li><li><strong>Wright</strong>: runs the test suite, repo health and git checks, compares the docs to the code, and applies small patches only after I confirm each one; key files are write-protected</li><li>Agent factory designed (Francis proposes new specialists when a gap appears) and deliberately held until a fifth agent is needed</li></ul></div><div class="feature-group"><h3>Memory + reasoning</h3><ul><li>Recall over a 16,880-chunk index of my past AI conversations (5,791 entries), with a gate that treats recalled text as untrusted</li><li>Memories are pulled out automatically at the end of each session, then de-duplicated and archived by a curation pass</li><li>Self-knowledge doc (what files, tools and features exist) regenerates on every commit via a pre-commit hook</li><li>Personality drift lock keeps the voice consistent across sessions</li><li>Reasoning eval: a test set checks whether Francis's calls match my real decisions; mismatches were traced and fixed</li><li>90-day "north star" doctrine with dimensions and operating rules that every task is filtered through, plus a scheduled daily brief</li></ul></div><div class="feature-group"><h3>Safety + cost control</h3><ul><li>Kill switch that stops all tool execution instantly, checked before anything else</li><li>Approval modes (off / smart / manual) plus a hardline blocklist that can't be turned off</li><li>Per-tool rate caps (for example, publishing max 1 per hour and 4 per day) and a process-wide cap on model calls per minute</li><li>Money guard: refuses any listing priced below known production cost, or any product type whose cost hasn't been verified</li><li>Append-only audit log of every tool call; log redaction in debug mode</li><li>Monthly budget watch with alerts at 50%, 80% and 100%; <code>/cost</code> shows spend by model and prompt-cache savings</li><li>Pre-commit secret scan, pre-push test gate, weekly dependency vulnerability scan, and an incident runbook</li><li>Graceful degradation: if a service is down, Francis falls back to reduced features instead of failing outright</li></ul></div><div class="feature-group"><h3>Interfaces</h3><ul><li>Terminal chat with resume, debug mode (tokens, cache, latency, tool calls) and slash commands</li><li>Push-to-talk voice mode with speech-to-text and spoken replies</li><li>Local-only browser dashboard: animated Three.js orb, live sub-agent indicators, streaming chat, and panels for heartbeat, memory, cost and self-knowledge</li><li>In-browser Allow/Deny cards for any action that needs confirmation, streamed live to the page</li><li>Discord bridge: a bot checks a studio channel every minute and acts on replies such as "approve 2", "deny" or a pasted design edit</li><li>Heartbeat: holds reminders and deadlines and surfaces quiet, dismissible notices at zero API cost</li></ul></div></div>
+    </div>
+  </section>
+
+  <div class="container pager">
+    <a href="no-ego-club.html"><small>← Previous</small><span>No Ego Club</span></a>
+    <a href="crafted-by-francisco.html" class="next"><small>Next →</small><span>Crafted by Francisco</span></a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Justin Bates</span>
+    <a href="mailto:batesj918@gmail.com">batesj918@gmail.com</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close">&times;</button><img alt=""></div>
+<script src="js/script.js"></script>
+</body>
+</html>

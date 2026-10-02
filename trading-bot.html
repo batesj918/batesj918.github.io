@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading Bot — Justin Bates</title>
+<meta name="description" content="A test-covered paper-trading system that turns market and disclosure signals into rule-bound trades.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo">Justin Bates</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#work" class="nav-link">Work</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      <li><a href="assets/Justin-Bates-Resume.pdf" class="nav-link nav-cta" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <a href="index.html#work" class="back-link">← All projects</a>
+      <div class="card-meta"><span class="status dev">Active Development</span><span class="category">Automation · Python</span></div>
+      <h1>Trading Bot</h1>
+      <p class="lede">A test-covered paper-trading system that turns market and disclosure signals into rule-bound trades.</p>
+      <dl class="facts"><div class="fact"><dt>Role</dt><dd>Solo: design, build</dd></div><div class="fact"><dt>Status</dt><dd>Active development</dd></div><div class="fact"><dt>Platform</dt><dd>Python · Alpaca · Robinhood</dd></div><div class="fact"><dt>Mode</dt><dd>Paper trading</dd></div></dl>
+
+      <div class="gallery" data-gallery>
+        <div class="gallery-main"><div class="backdrop"></div><img src="assets/shots/cover-trading.jpg" alt="Representative run output"></div>
+        <p class="gallery-caption">Representative run output. There&#x27;s no UI; the system runs headless and reports by email.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container story">
+      <div>
+        <h2>The challenge</h2>
+        <p>Manually tracking trading signals and acting on them is slow and emotional. I wanted a disciplined way to test strategies, with hard limits so no impulsive call or runaway script can do damage.</p>
+        <h2 style="margin-top:26px">What I built</h2>
+        <p>It started as a single Replit script and grew, over 26+ build phases, into a test-covered <strong>paper-trading system</strong> on Alpaca. It combines options-flow data with congressional trade disclosures, submits paper-only orders and emails a daily report.</p><p>A second layer connects the official <strong>Robinhood MCP</strong> connector to a separate, dedicated cash account. There, technical indicators go to Claude as structured data, and every trade has to clear hard guardrails.</p>
+      </div>
+      <div>
+        <h2>Results</h2>
+        <ul class="results"><li><strong>448 of 448 tests passing</strong>, with confirmed brokerage connectivity.</li><li><strong>Hard guardrails:</strong> a confidence threshold, a per-trade dollar cap, a buying-power check, and paper-only orders.</li><li><strong>Being hardened</strong> for always-on deployment.</li></ul>
+        <h2 style="margin-top:30px">Built with</h2>
+        <ul class="stack"><li>Python</li><li>Alpaca API</li><li>Robinhood MCP</li><li>yfinance</li><li>Claude API</li><li>py-clob-client</li><li>pytest</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container">
+      <h2>Features <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-3);font-weight:400;margin-left:8px">14 total</span></h2>
+      <div class="feature-grid"><div class="feature-group"><h3>Signals + decisions</h3><ul><li>Options-flow feed combined with congressional trade disclosures (STOCK Act)</li><li>RSI, SMA and volume from yfinance, sent as structured JSON to Claude for a scored decision</li><li>Researched extra signals: congressional trackers (Capitol Trades, Quiver Quantitative), 13F institutional filings and Form 4 insider trades</li><li>Confidence scoring for every trade idea</li></ul></div><div class="feature-group"><h3>Risk controls</h3><ul><li>Paper-only order submission while strategies are proven</li><li>Confidence threshold: no trade below it</li><li>Per-trade dollar cap and buying-power check before any order</li><li>Separate, dedicated cash account for agent trading; the main account is read-only</li></ul></div><div class="feature-group"><h3>Engineering + ops</h3><ul><li>26+ numbered build phases, each verified before the next</li><li>448-test suite; confirmed brokerage connectivity</li><li>Daily report sent by email, with a dashboard pipeline in progress</li><li>Hardening underway for always-on deployment</li></ul></div><div class="feature-group"><h3>Adjacent experiments</h3><ul><li>Polymarket copy-trading bot MVP (py-clob-client SDK, Polygon) built on Replit</li><li>Evaluated correlated-market arbitrage, chosen over news arbitrage because of latency limits</li></ul></div></div>
+    </div>
+  </section>
+
+  <div class="container pager">
+    <a href="tracksprites.html"><small>← Previous</small><span>TrackSprites</span></a>
+    <a href="pt-survival-kit.html" class="next"><small>Next →</small><span>PT Survival Kit</span></a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Justin Bates</span>
+    <a href="mailto:batesj918@gmail.com">batesj918@gmail.com</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close">&times;</button><img alt=""></div>
+<script src="js/script.js"></script>
+</body>
+</html>

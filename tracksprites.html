@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrackSprites — Justin Bates</title>
+<meta name="description" content="A Fortnite companion app for tracking, trading and comparing Sprite collections, kept current by AI agents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo">Justin Bates</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#work" class="nav-link">Work</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      <li><a href="assets/Justin-Bates-Resume.pdf" class="nav-link nav-cta" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <a href="index.html#work" class="back-link">← All projects</a>
+      <div class="card-meta"><span class="status live">Live</span><span class="category">Web product · gaming</span></div>
+      <h1>tracksprites.com</h1>
+      <p class="lede">A Fortnite companion app for tracking, trading and comparing Sprite collections, kept current by AI agents.</p>
+      <dl class="facts"><div class="fact"><dt>Role</dt><dd>Solo: design, build, run</dd></div><div class="fact"><dt>Status</dt><dd>Live</dd></div><div class="fact"><dt>Platform</dt><dd>Installable web app (PWA)</dd></div><div class="fact"><dt>Site</dt><dd><a href="https://tracksprites.com" target="_blank" rel="noopener">tracksprites.com ↗</a></dd></div></dl>
+
+      <div class="gallery" data-gallery>
+        <div class="gallery-main"><div class="backdrop"></div><img src="assets/shots/tracksprites-collection.jpg" alt="Collection tracker"></div>
+        <p class="gallery-caption">Collection tracker: 218 variants across two seasons, with live dust-value analytics.</p>
+      <div class="gallery-thumbs"><button class="gallery-thumb is-active" aria-pressed="true" aria-label="Collection tracker" data-src="assets/shots/tracksprites-collection.jpg" data-alt="Collection tracker" data-caption="Collection tracker: 218 variants across two seasons, with live dust-value analytics."><img src="assets/shots/tracksprites-collection.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Interactive Sprite Map" data-src="assets/shots/tracksprites-map.jpg" data-alt="Interactive Sprite Map" data-caption="An interactive, zoomable Sprite Map of the island."><img src="assets/shots/tracksprites-map.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Lobby Hack codes page" data-src="assets/shots/tracksprites-codes.jpg" data-alt="Lobby Hack codes page" data-caption="Lobby Hack codes with a redeemed checklist, kept current by an automated daily check."><img src="assets/shots/tracksprites-codes.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Squad Trade planner" data-src="assets/shots/tracksprites-trade.jpg" data-alt="Squad Trade planner" data-caption="Squad Trade builds a plan so every player in a 2–4 person squad gets something."><img src="assets/shots/tracksprites-trade.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Season leaderboard (names blurred)" data-src="assets/shots/tracksprites-leaderboard.jpg" data-alt="Season leaderboard (names blurred)" data-caption="Season and all-time leaderboards for real players. Names are blurred here."><img src="assets/shots/tracksprites-leaderboard.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Mobile view" data-src="assets/shots/tracksprites-mobile.jpg" data-alt="Mobile view" data-caption="Built mobile-first: an installable PWA with bottom-tab navigation."><img src="assets/shots/tracksprites-mobile.jpg" alt="" loading="lazy"></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container story">
+      <div>
+        <h2>The challenge</h2>
+        <p>Fortnite's Sprites are collectibles with multiple variants and mastery levels, and new ones arrive every season. Epic provides no tool to track a collection, estimate costs, find codes or coordinate trades, so players used spreadsheets and Discord threads.</p>
+        <h2 style="margin-top:26px">What I built</h2>
+        <p>TrackSprites started as a single tracker and grew into a full companion app. It has collection tracking with dust-value analytics, an interactive map, a code checklist, compare and squad-trade planning, and leaderboards with public profiles.</p><p>Scheduled AI agents keep it current each season. One checks daily for new codes and variants, and another posts to the Discord and Facebook communities twice a day.</p>
+      </div>
+      <div>
+        <h2>Results</h2>
+        <ul class="results"><li><strong>Live on its own domain</strong> with a real player community.</li><li><strong>Top collectors are tracking 200+ variants</strong> each on the leaderboard.</li><li><strong>New in-game content reaches the site the same week it appears</strong>, as the Loot Hacker variant tier did.</li></ul>
+        <h2 style="margin-top:30px">Built with</h2>
+        <ul class="stack"><li>React + Vite</li><li>TypeScript</li><li>Tailwind CSS</li><li>Express 5</li><li>PostgreSQL + Drizzle</li><li>OpenAPI / Orval</li><li>OAuth (Discord · Google · Epic)</li><li>Workbox PWA</li><li>i18next</li><li>Claude Code agents</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container">
+      <h2>Features <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-3);font-weight:400;margin-left:8px">21 total</span></h2>
+      <div class="feature-grid"><div class="feature-group"><h3>Collection + analytics</h3><ul><li>218 variants across two seasons (C7S3 Runners, C7S4 Override), grouped by season</li><li>Tap a variant to cycle its state: locked → levels 1–4 → mastered</li><li>Owned / Missing filters and sort by type or name</li><li>Dust-value panel: the total value, a breakdown by variant tier, and the priciest item</li><li>Dust calculator (bottom sheet on mobile, sidebar on desktop) and a Gizmo progress tracker</li></ul></div><div class="feature-group"><h3>Player tools</h3><ul><li>Interactive, zoomable island map with spawn info</li><li>Lobby Hack code list (44 codes) with copy buttons and a redeemed checklist</li><li>Compare your collection with any player</li><li>Squad Trade: builds a plan so every player in a 2–4 person squad gets something; live trade rooms by code</li><li>Share links that don't require sign-in, plus export of the collection as an image</li><li>Strategy guide</li></ul></div><div class="feature-group"><h3>Community + accounts</h3><ul><li>Season and all-time leaderboards, plus friend groups</li><li>Public profiles at /u/username</li><li>Sign in with Discord, Google or Epic; works without an account, and saved progress merges in on first sign-in</li><li>Discord community; lore and tips auto-posted to Discord and Facebook twice a day</li></ul></div><div class="feature-group"><h3>Platform + operations</h3><ul><li>Installable PWA that works offline</li><li>Available in English, Spanish, French and Japanese</li><li>Daily scheduled AI agent checks for new codes and variants and only publishes a change once two independent sources confirm it</li><li>Falls back to a Replit mirror of the code when GitHub access is blocked</li><li>Content bank served as JSON and chosen by date, so no state file is needed; a relay endpoint handles Facebook posting</li><li>OpenAPI spec as the single source of truth for the API, with a typed client generated from it; written threat model</li></ul></div></div>
+    </div>
+  </section>
+
+  <div class="container pager">
+    <a href="plastic-reset.html"><small>← Previous</small><span>Plastic Reset</span></a>
+    <a href="trading-bot.html" class="next"><small>Next →</small><span>Trading Bot</span></a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Justin Bates</span>
+    <a href="mailto:batesj918@gmail.com">batesj918@gmail.com</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close">&times;</button><img alt=""></div>
+<script src="js/script.js"></script>
+</body>
+</html>

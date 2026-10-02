@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plastic Reset — Justin Bates</title>
+<meta name="description" content="A quiz that gives people a personal microplastic exposure score, then points them to the swaps that lower it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="logo">Justin Bates</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#work" class="nav-link">Work</a></li>
+      <li><a href="index.html#about" class="nav-link">About</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+      <li><a href="assets/Justin-Bates-Resume.pdf" class="nav-link nav-cta" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <a href="index.html#work" class="back-link">← All projects</a>
+      <div class="card-meta"><span class="status live">Live</span><span class="category">Product + brand</span></div>
+      <h1>Plastic Reset</h1>
+      <p class="lede">A quiz that gives people a personal microplastic exposure score, then points them to the swaps that lower it.</p>
+      <dl class="facts"><div class="fact"><dt>Role</dt><dd>Solo: brand, design, build</dd></div><div class="fact"><dt>Status</dt><dd>Live</dd></div><div class="fact"><dt>Platform</dt><dd>Web + iOS/Android</dd></div><div class="fact"><dt>Site</dt><dd><a href="https://theplasticreset.com" target="_blank" rel="noopener">theplasticreset.com ↗</a></dd></div></dl>
+
+      <div class="gallery" data-gallery>
+        <div class="gallery-main"><div class="backdrop"></div><img src="assets/shots/plasticreset-home.jpg" alt="Plastic Reset homepage"></div>
+        <p class="gallery-caption">Homepage: the hook is a 60-second test, not a lecture.</p>
+      <div class="gallery-thumbs"><button class="gallery-thumb is-active" aria-pressed="true" aria-label="Plastic Reset homepage" data-src="assets/shots/plasticreset-home.jpg" data-alt="Plastic Reset homepage" data-caption="Homepage: the hook is a 60-second test, not a lecture."><img src="assets/shots/plasticreset-home.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Quiz question screen" data-src="assets/shots/plasticreset-quiz.jpg" data-alt="Quiz question screen" data-caption="12 plain-language questions across 7 exposure categories."><img src="assets/shots/plasticreset-quiz.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Shareable score card" data-src="assets/shots/plasticreset-score.jpg" data-alt="Shareable score card" data-caption="A shareable 0–100 score card, with download and one-tap sharing to X, Facebook and WhatsApp."><img src="assets/shots/plasticreset-score.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Curated swaps shop" data-src="assets/shots/plasticreset-shop.jpg" data-alt="Curated swaps shop" data-caption="Curated shop: every swap is mapped to a quiz category."><img src="assets/shots/plasticreset-shop.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="7-Day Guide landing page" data-src="assets/shots/plasticreset-guide.jpg" data-alt="7-Day Guide landing page" data-caption="Email-gated 7-Day Plastic Reset Guide, the lead magnet behind the email sequence."><img src="assets/shots/plasticreset-guide.jpg" alt="" loading="lazy"></button><button class="gallery-thumb" aria-pressed="false" aria-label="Auto-updating news section" data-src="assets/shots/plasticreset-news.jpg" data-alt="Auto-updating news section" data-caption="A self-updating “in the news” strip keeps the homepage current."><img src="assets/shots/plasticreset-news.jpg" alt="" loading="lazy"></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container story">
+      <div>
+        <h2>The challenge</h2>
+        <p>Most people know microplastics exist, but they have no idea what their own exposure looks like and no reason to change anything. A personal, concrete number does.</p>
+        <h2 style="margin-top:26px">What I built</h2>
+        <p>I built Plastic Reset end to end, from the brand to four connected apps: a marketing homepage, a web quiz, a React Native mobile app and an API.</p><p>The <strong>Microplastic Exposure Score</strong> quiz gives each person a 0–100 score across 7 categories and a shareable score card. Their highest-risk areas route them to specific swaps in the shop, and an email-gated 7-Day Guide feeds an email sequence.</p>
+      </div>
+      <div>
+        <h2>Results</h2>
+        <ul class="results"><li><strong>Live at theplasticreset.com</strong>. Real users take the quiz and share their scores.</li><li><strong>Personalized commerce:</strong> every product is matched to a quiz category, so results point to specific items.</li><li><strong>Privacy and security from the start:</strong> consent-first analytics, verified email sign-ups and a written threat model.</li></ul>
+        <h2 style="margin-top:30px">Built with</h2>
+        <ul class="stack"><li>React + Vite</li><li>Expo (React Native)</li><li>Express 5</li><li>PostgreSQL + Drizzle</li><li>OpenAPI codegen</li><li>Zod</li><li>Brevo</li><li>Cloudflare Turnstile</li><li>Canva</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="container">
+      <h2>Features <span style="font-family:var(--font-mono);font-size:0.8rem;color:var(--text-3);font-weight:400;margin-left:8px">21 total</span></h2>
+      <div class="feature-grid"><div class="feature-group"><h3>Quiz + scoring</h3><ul><li>12 plain-language questions, 7 exposure categories (drinking, cooking, food storage, clothing, personal care, air, cleaning)</li><li>Weighted 0–100 score with 4 risk bands (Low / Moderate / High / Critical) and each person's top exposure sources</li><li>Bot-resistant quiz sessions (Cloudflare Turnstile), loaded only with consent</li><li>Shareable result pages with auto-generated social preview images, a downloadable score card, and X / Facebook / WhatsApp sharing</li><li>Companion React Native (Expo) mobile app with its own consent banner</li></ul></div><div class="feature-group"><h3>Commerce</h3><ul><li>Curated shop of low-plastic swaps; each product is tagged to a quiz category so results link to the right items</li><li>Category filter chips (Air, Food Storage, Kitchen, Water)</li><li>Product images downloaded and served from the site itself, never hotlinked (keeps affiliate links compliant)</li><li>Catalog sync: editing the product list automatically updates the database on the next request</li></ul></div><div class="feature-group"><h3>Email + lead generation</h3><ul><li>Email-gated 7-Day Plastic Reset Guide (designed eBook), with the PDF served only through a gated, no-index endpoint</li><li>Double opt-in built in-house: signed 24-hour tokens stored only as hashes, and a confirmation page email scanners can't trigger</li><li>Signed, verified profile claims (name, score, risk band) sent to the Brevo list only after confirmation</li><li>Retry-safe: a failed send or enrollment is never reported as a success</li></ul></div><div class="feature-group"><h3>Content + reliability</h3><ul><li>Homepage news strip: the 6 newest microplastics stories, refreshed hourly from Google News</li><li>Resolves Google News redirect links to the real publisher articles and pulls each article's image</li><li>Falls back to publisher RSS feeds, plus a Postgres cache so a cold start still shows content</li><li>Image proxy with type and size checks, an in-memory cache and branded placeholders</li></ul></div><div class="feature-group"><h3>Privacy, security + brand</h3><ul><li>Consent-first: no analytics or bot checks before the visitor agrees; declining is honored everywhere</li><li>Written threat model covering spoofing, tampering, data leaks, abuse and admin access</li><li>Admin-only reporting and catalog routes, a tight Content Security Policy, and log redaction</li><li>Full brand kit: faceted water-drop mark, color tokens, Montserrat type, voice rules, and colors for each risk band</li></ul></div></div>
+    </div>
+  </section>
+
+  <div class="container pager">
+    <a href="crafted-by-francisco.html"><small>← Previous</small><span>Crafted by Francisco</span></a>
+    <a href="tracksprites.html" class="next"><small>Next →</small><span>TrackSprites</span></a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Justin Bates</span>
+    <a href="mailto:batesj918@gmail.com">batesj918@gmail.com</a>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" aria-label="Close">&times;</button><img alt=""></div>
+<script src="js/script.js"></script>
+</body>
+</html>

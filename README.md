@@ -6,14 +6,23 @@ Static site, no build step. Plain HTML/CSS/vanilla JS.
 
 ```
 Portfolio Site/
-  index.html
+  index.html                 home: hero → project card grid → about → contact
+  francis.html               one page per project (same template)
+  crafted-by-francisco.html
+  plastic-reset.html
+  tracksprites.html
+  trading-bot.html
+  pt-survival-kit.html
+  no-ego-club.html
   css/style.css
-  js/script.js          (nav, scroll reveal, project galleries + lightbox)
-  assets/
-    Justin-Bates-Resume.pdf
-    shots/              (project screenshots, see below)
-  README.md
+  js/script.js               mobile nav, project galleries, lightbox
+  assets/Justin-Bates-Resume.pdf
+  assets/shots/              screenshots + card covers (cover-*.jpg)
 ```
+
+Each project page follows the same layout: title + one-line pitch, quick facts, image gallery,
+The challenge / What I built / Results / Built with, the full feature list, then Previous/Next.
+The pages are generated from one data file, so ask Claude to regenerate them rather than hand-editing seven files.
 
 ## Screenshots (assets/shots)
 
@@ -27,12 +36,8 @@ Refreshed 30 Sep 2026.
   (player names on the leaderboard shot are blurred on purpose)
 - No Ego Club: `noego-ego-controls / -you-are-not / -ego-vs-soul / -ebook .jpg` (Canva exports) + `noego-workbook.png`
 
-Each case study also has a collapsible **Full feature breakdown** (`<details class="project-features">`).
-Add a bullet to the right `<div class="feature-group">` to extend it.
+Card covers: `cover-etsy.jpg`, `cover-noego.jpg` (collages), `cover-trading.jpg`, `cover-ptkit.jpg` (rendered illustrations).
 
-Galleries: each case study with `data-gallery` has a main shot plus thumbnail buttons. A thumbnail's
-`data-src`, `data-url`, `data-caption` and `data-alt` control what the main frame swaps to. To add a
-shot, drop the image in `assets/shots/` and copy one of the `<button class="gallery-thumb">` lines.
 
 ## Brand notes
 
